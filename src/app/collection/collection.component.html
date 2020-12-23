@@ -1,0 +1,14 @@
+<div class="collection">
+    <div class="title">{{title}}</div>
+    <div class="subtitle">{{sub}}</div>
+
+    <div class="products">
+        <div *ngFor="let item of data; index as i">
+            <product-card
+                [title]="item.title"
+                [price]="item.price"
+                [brand]="item.brand"
+            ></product-card>
+        </div>
+    </div>
+</div>

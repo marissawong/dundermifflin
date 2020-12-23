@@ -1,0 +1,69 @@
+$accent1: #FF6E9C;
+$accent2: #F9D439;
+$bannerText: #AE4559;
+
+.home {
+    font-family: 'Work Sans', sans-serif;
+
+    .banner {
+        width: calc(100% - 1vw);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'text text text company';
+        grid-gap: 1vw;
+
+        .text {
+        background-color: $accent2;
+        padding-top: calc(3vw + 50px);
+        padding-bottom: 3vw;
+        padding-left: 3vw;
+        align-items: flex-end;
+        color: $bannerText;
+        font-weight: 600;
+        font-size: calc(14pt + 1.8vw);
+        line-height: calc(16pt + 1.2vw);
+        grid-area: text;
+        }
+
+        .company {
+            background-color: $bannerText;
+            color: white;
+            padding: 2.5vw;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            font-size: calc(3pt + 1vw);
+            line-height: calc(10pt + 1vw);
+            grid-area: company;
+
+            .name {
+                font-family: 'Roboto Slab', serif;
+                font-weight: 800;
+                font-size: calc(7pt + 1vw);
+                margin-bottom: 0px;
+            }
+
+            .description {
+                margin: 0px;
+
+                span.email {
+                    font-weight: 600;
+                    background-color: #f7f7f7;
+                    padding: 3px;
+                    color: $bannerText;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .home {
+        .banner {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 'text' 'company';
+        }
+    }
+}
